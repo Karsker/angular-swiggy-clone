@@ -1,0 +1,11 @@
+<app-navbar />
+<div class="mt-20 bg-gradient-to-b from-stone-100 to-10% px-10 lg:px-52 py-5">
+    <app-featured-dishes />
+    <hr class="my-5 border">
+    <app-top-restaurants />
+    <app-find-restaurants [data]="contentCity" title="Best places to Eat Across Cities"/>
+    <app-find-restaurants [data]="contentCuisine" title="Best Cuisines Near Me"/>
+</div>
+<app-sign-in-panel />
+
+<app-footer />

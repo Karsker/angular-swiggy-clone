@@ -1,0 +1,5 @@
+<h1 class="text-2xl font-black mt-16 mb-4">{{ title }}</h1>
+
+<div class="flex justify-evenly flex-wrap gap-5">
+    <app-find-restaurant-card *ngFor="let content of data" [content]="content"/>
+</div>

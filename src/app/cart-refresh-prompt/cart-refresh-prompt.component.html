@@ -1,0 +1,16 @@
+<div [ngClass]="{'bottom-5': showPrompt, '-bottom-full': !showPrompt}" class="fixed transition-all duration-200 z-20 left-1/2 -translate-x-1/2 w-[36rem] gap-3 bg-white shadow-lg p-10 flex flex-col">
+    <h1 class="text-xl font-black">
+        Items already in cart
+    </h1>
+    <p>
+        Your cart contains items from other restaurant. Would you like to reset your cart before adding items from this restaurant?
+    </p>
+    <div class="flex justify-between gap-5">
+        <button class="border-2 border-green-primary text-green-primary font-bold p-3 w-3/4" (click)="cancelRefresh()">
+            NO
+        </button>
+         <button class="text-white font-bold bg-green-primary p-3 w-3/4" (click)="refreshCart()">
+            YES, START AFRESH
+        </button>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+<div>
+
+    <div class="flex justify-between">
+        <h1 *ngIf="userName" class="text-2xl font-black">{{ userName }}, what's on your mind?</h1>
+        <h1 *ngIf="!userName" class="text-2xl font-black">Explore popular dishes</h1>
+        <!-- Features dishes images -->
+        
+        <div class="flex gap-3">
+            <button class=" bg-stone-300 rounded-full p-1" (click)="scrollBackward()"><img src="../../assets/icons/arrow-back.png" alt="back" class="w-6" ></button>
+            <button class=" bg-stone-300 rounded-full p-1" (click)="scrollForward()"><img src="../../assets/icons/arrow-forward.png" alt="forward" class="w-6" ></button>
+        </div>
+    </div>
+    <div id="featured-dishes" class="flex gap-2 p-4 scroll-smooth overflow-scroll no-scrollbar">
+        <app-single-dish *ngFor="let dish of dishes" [imgSrc]="dish.imgSrc" [imgAlt]="dish.imgAlt"/>
+    </div>
+</div>

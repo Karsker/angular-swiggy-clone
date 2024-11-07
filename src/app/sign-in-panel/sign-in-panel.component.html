@@ -1,0 +1,35 @@
+<div [ngClass]="{'-translate-x-full': showPanel}" class="fixed transition-all duration-300 left-full  top-0 h-full bg-white z-40 p-10 w-[32rem] shadow-xl">
+    <button (click)="handleClose()">
+        <img src="../../assets/icons/close-icon.png" alt="close" class="size-5">
+    </button>
+
+    <!-- User Login Form -->
+    <div *ngIf="showSignIn" class="flex flex-col gap-6">
+        <div>
+            <h1 class="text-3xl font-medium">Login</h1>
+            <h3 class="text-sm text-orange-500 my-3 font-medium hover:cursor-pointer" (click)="toggleForms()">or create an account</h3>
+        </div>
+        <form [formGroup]="signInForm" (ngSubmit)="login()">
+            <div class="flex flex-col mt-3">
+                <input type="text" name="phone" placeholder="Phone number" class="border p-5 font-semibold outline-none" formControlName="userPhone">
+            </div>
+            <button type="submit" class="w-full p-5 bg-orange-600 text-white font-bold mt-5">CONTINUE</button>
+        </form>
+    </div>
+
+    <!-- User sign up form -->
+    <div *ngIf="showSignUp" class="flex flex-col gap-6">
+        <div>
+            <h1 class="text-3xl font-medium">Sign up</h1>
+            <h3 class="text-sm text-orange-500 my-3 font-medium hover:cursor-pointer" (click)="toggleForms()">or login to your account</h3>
+        </div>
+        <form [formGroup]="signUpForm" (ngSubmit)="signUp()">
+            <div class="flex flex-col mt-3">
+                <input type="text" name="phone" placeholder="Phone number" class="border p-5 font-semibold outline-none" formControlName="userPhone">
+                <input type="text" name="name" placeholder="Name" class="border p-5 font-semibold outline-none" formControlName="userName">
+                <input type="email" name="email" placeholder="Email" class="border p-5 font-semibold outline-none" formControlName="userEmail">  
+            </div>
+            <button type="submit" class="w-full p-5 bg-orange-600 text-white font-bold mt-5">CONTINUE</button>
+        </form>
+    </div>
+</div>

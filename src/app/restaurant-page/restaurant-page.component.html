@@ -1,0 +1,44 @@
+<app-navbar />
+<div class="flex mt-20 w-full justify-center bg-gradient-to-b from-stone-100 to-10%">
+  <div class="w-full px-5 lg:w-[50rem] lg:px-0 py-5 flex flex-col gap-4">
+    <h1 class="text-2xl font-black">
+      {{ restaurantDetails.name }}
+    </h1>
+    <app-restaurant-header
+      [rating]="restaurantDetails.rating"
+      [tags]="restaurantDetails.tags"
+      [deliveryTime]="restaurantDetails.deliveryTime"
+      [outlet]="restaurantDetails.outlet"
+    />
+
+    <!-- Menu -->
+    <div class="w-full flex justify-center">
+      <img src="../../assets/icons/menu-styling.png" alt="menu" class="w-32" />
+    </div>
+    <!-- Search bar -->
+    <input
+      type="search"
+      class="w-full bg-gray-200 rounded-xl p-4 text-center font-semibold outline-none"
+      placeholder="Search for dishes"
+    />
+
+    <!-- Top Picks -->
+    <div>
+        <h2 class="text-lg font-black">Top Picks</h2>
+        <div class="flex gap-4 overflow-scroll no-scrollbar">
+            <app-top-pick-card *ngFor="let dish of restaurantDetails.topPicks" [dish]="dish"/>
+        </div>
+    </div>
+    <div>
+      <h2 class="text-lg font-black">Recommended</h2>
+      <app-menu-card
+        *ngFor="let dish of restaurantDetails?.menu"
+        [dish]="dish"
+        [restaurantId]="restaurantDetails.id"
+      />
+    </div>
+  </div>
+</div>
+<app-sign-in-panel />
+<app-bottom-toast />
+<app-cart-refresh-prompt />

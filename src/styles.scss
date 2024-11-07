@@ -1,1 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    /* Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+  
+    .no-scrollbar {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+
+    .bg-orange-primary {
+      background-color: #fe5200;
+    }
+
+    .bg-green-primary {
+      background-color: #60b246;
+    }
+
+    .border-green-primary {
+      border-color: #60b246;
+    }
+    
+    .text-green-primary {
+      color: #60b246
+    }
+  }

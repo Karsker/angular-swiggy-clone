@@ -1,0 +1,41 @@
+<footer class="flex flex-col w-full py-5 bg-[#f1f0f5] items-center mt-20">
+    <div class="flex flex-col lg:flex-row gap-3 items-center">
+        <span class="font-black text-2xl">
+            For better experience,download the Swiggy app now
+        </span>
+        <img src="../../assets/images/footer/play-store.avif" alt="play-store" class="inline w-52">
+        <img src="../../assets/images/footer/app-store.avif" alt="app-store" class="inline w-52">
+    </div>
+
+    <div class="flex flex-col md:flex-row items-center mt-10 gap-5 justify-around w-3/4">
+        <div>
+            <img src="../../assets/images/footer/swiggy-logo.png" alt="swiggy-logo" class="w-40">
+        </div>
+        <div class="flex flex-col gap-2">
+            <h3 class="font-black">Company</h3>
+            <a class="no-underline font-semibold text-stone-500" *ngFor="let link of companyLinks">{{ link.title }}</a>
+        </div>
+
+        <div class="flex flex-col gap-3">
+            <div class="flex flex-col gap-2">
+                <h3 class="font-extrabold">Contact Us</h3>
+                <a class="no-underline font-semibold text-stone-500" *ngFor="let link of contactLinks">{{ link.title }}</a>
+            </div>
+
+            <div class="flex flex-col gap-2">
+                <h3 class="font-extrabold">Legal</h3>
+                <a class="no-underline font-semibold text-stone-500" *ngFor="let link of legalLinks">{{ link.title }}</a>
+            </div>
+        </div>
+
+        <div class="flex flex-col gap-2">
+            <h3 class="font-extrabold">Available in:</h3>
+            <a class="no-underline font-semibold text-stone-500" *ngFor="let link of availableAreasLinks">{{ link.title }}</a>
+        </div>
+
+        <div class="flex flex-col gap-2">
+            <h3 class="font-extrabold">Life at Swiggy</h3>
+            <a class="no-underline font-semibold text-stone-500" *ngFor="let link of lifeAtSwiggyLinks">{{ link.title }}</a>
+        </div>
+    </div>
+</footer>

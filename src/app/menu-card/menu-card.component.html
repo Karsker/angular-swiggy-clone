@@ -1,0 +1,20 @@
+<div class="w-full">
+    <div class="w-full flex p-3 gap-10 h-52">
+        <div class="relative flex flex-col gap-2">
+            <img *ngIf="dish.veg" src="../../assets/icons/veg-icon.png" alt="veg" class="size-6">
+            <img *ngIf="!dish.veg" src="../../assets/icons/non-veg-icon.png" alt="non-veg" class="size-6">
+            <h3 class="font-bold text-lg text-stone-700">{{ dish.name }}</h3>
+            <span class="font-semibold">₹{{ dish.price }}</span>
+            <p class="font-semibold text-stone-600 overflow-scroll no-scrollbar">{{ dish.description }}</p>
+            
+        </div>
+        <div class="relative  min-w-40 w-40 min-h-full">
+            <img [src]="dish.imgSrc" alt="image" class="rounded-xl w-full">
+    
+            <button class="absolute w-3/4 border shadow-md z-10 bottom-1 bg-white rounded-lg left-1/2 -translate-x-1/2 px-3 py-2 text-green-600 font-black" (click)="addToCart()">
+                ADD
+            </button>
+        </div>
+    </div>
+    <hr class="my-4">
+</div>

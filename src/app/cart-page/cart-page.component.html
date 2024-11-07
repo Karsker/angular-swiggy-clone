@@ -1,0 +1,76 @@
+<app-navbar />
+<div class="flex mt-20 w-full justify-center">
+
+    <div *ngIf="restaurantDetails" class="w-[50rem] px-5 py-5 flex flex-col gap-4">
+
+        <!-- Restaurant image, name and location -->
+        <div class="flex gap-4">
+            <img [src]="restaurantDetails.imgSrc" [alt]="restaurantDetails.name" class="size-16"/>
+            <div class="flex flex-col">
+                <span class="font-semibold text-lg">{{ restaurantDetails.name }}</span>
+                <span class="font-md text-sm">{{ restaurantDetails.outlet }}</span>
+            </div>
+        </div>
+
+        <!-- Cart items -->
+         <table>
+             <tr *ngFor="let item of cartItems">
+                <!-- Conditionally show non veg or veg icons -->
+                <td>
+                    <img *ngIf="item.veg" src="../../assets/icons/veg-icon.png" alt="veg" class="size-4">
+                    <img *ngIf="!item.veg" src="../../assets/icons/non-veg-icon.png" alt="non-veg" class="size-4">
+                </td>
+                <td>{{ item.itemName }}</td>
+                <td><input type="number" [value]="item.quantity" class="border text-center w-16" (change)="updateQuantity(item.id, $event)"/></td>
+                <td>₹{{ item.amount }}</td>
+             </tr>
+         </table>
+
+         <!-- Final bill -->
+          <h3 class="font-semibold">Bill Details</h3>
+          <table class="text-gray-500 text-sm">
+            <tr>
+                <td>Item Total</td>
+                <td>₹{{ totalAmount }}</td>
+            </tr>
+            <tr>
+                <td colspan="2"><hr></td>
+            </tr>
+            <tr>
+                <td>Delivery Fee</td>
+                <td>FREE</td>
+            </tr>
+            <tr>
+                <td>Platform fee</td>
+                <td>₹10</td>
+            </tr>
+            <tr>
+                <td>GST and Restaurant Charges</td>
+                <td>₹59.70</td>
+            </tr>
+            <tr>
+                <td colspan="2"><hr></td>
+            </tr>
+            <tr class="font-bold text-black">
+                <td>TO PAY</td>
+                <td>₹{{ totalAmount + 70 }}</td>
+            </tr>
+          </table>
+
+          <button class="w-full bg-green-primary text-white font-bold py-2 md:w-fit px-3" (click)="checkout()">PROCEED TO PAY</button>
+         
+    </div>
+
+    <!-- When the cart is empty -->
+     <div *ngIf="!restaurantDetails" class="w-full flex justify-center items-center h-[calc(100vh-5rem)]">
+        <div class="flex flex-col items-center gap-3">
+            <img src="../../assets/images/empty-cart.png" alt="empty-cart" class="border border-blue-500" class="w-72">
+            <span class="font-bold text-xl text-stone-600">Your cart is empty</span>
+            <span class="text-sm text-stone-400">You can go to home page to view more restaurants</span>
+            <a routerLink="/">
+                <button class="bg-orange-primary text-sm px-3 py-2 text-white font-bold">SEE RESTAURANTS NEAR YOU</button>
+            </a>
+        </div>
+     </div>
+</div>
+<app-sign-in-panel />
