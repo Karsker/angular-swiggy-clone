@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { TopPickDish } from '../../types';
+import { TopPickDish } from '../../../types';
 
 @Component({
   selector: 'app-top-pick-card',

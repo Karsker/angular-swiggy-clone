@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { NavbarLinkComponent } from '../navbar-link/navbar-link.component';
 import { NgFor, NgIf, NgClass } from '@angular/common';
 import { RouterLink } from '@angular/router';
-import { UserAuthenticationService } from '../user-authentication.service';
-import { User } from '../../types';
+import { UserAuthenticationService } from '../../services/user-authentication/user-authentication.service';
+import { User } from '../../../types';
 @Component({
   selector: 'app-navbar',
   standalone: true,

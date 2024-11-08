@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
-import { RestaurantMenuDish } from '../../types';
+import { RestaurantMenuDish } from '../../../types';
 import { NgIf } from '@angular/common';
-import { CartHandlerService } from '../cart-handler.service';
+import { CartHandlerService } from '../../services/cart-handler/cart-handler.service';
 @Component({
   selector: 'app-menu-card',
   standalone: true,

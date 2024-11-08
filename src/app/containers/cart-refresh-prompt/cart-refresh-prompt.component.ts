@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CartHandlerService } from '../cart-handler.service';
+import { CartHandlerService } from '../../services/cart-handler/cart-handler.service';
 import { NgClass, NgIf } from '@angular/common';
 
 @Component({

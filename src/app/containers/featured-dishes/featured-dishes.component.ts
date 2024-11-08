@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { SingleDishComponent } from '../single-dish/single-dish.component';
+import { SingleDishComponent } from '../../containers/single-dish/single-dish.component';
 import { NgFor, NgIf } from '@angular/common';
-import { UserAuthenticationService } from '../user-authentication.service';
+import { UserAuthenticationService } from '../../services/user-authentication/user-authentication.service';
 @Component({
   selector: 'app-featured-dishes',
   standalone: true,

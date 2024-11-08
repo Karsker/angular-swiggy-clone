@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
-import { RestaurantDetails, TopPickDish } from '../../types';
-import { NavbarComponent } from '../navbar/navbar.component';
+import { RestaurantDetails } from '../../../types';
+import { NavbarComponent } from '../../containers/navbar/navbar.component';
 import { ActivatedRoute } from '@angular/router';
-import { MenuCardComponent } from '../menu-card/menu-card.component';
-import { restaurantMenus } from '../../data/restaurants-data';
-import { CartRefreshPromptComponent } from '../cart-refresh-prompt/cart-refresh-prompt.component';
+import { MenuCardComponent } from '../../containers/menu-card/menu-card.component';
+import { restaurantMenus } from '../../../data/restaurants-data';
+import { CartRefreshPromptComponent } from '../../containers/cart-refresh-prompt/cart-refresh-prompt.component';
 import { NgFor } from '@angular/common';
-import { SignInPanelComponent } from '../sign-in-panel/sign-in-panel.component';
-import { RestaurantHeaderComponent } from '../restaurant-header/restaurant-header.component';
-import { TopPickCardComponent } from '../top-pick-card/top-pick-card.component';
-import { BottomToastComponent } from '../bottom-toast/bottom-toast.component';
+import { SignInPanelComponent } from '../../containers/sign-in-panel/sign-in-panel.component';
+import { RestaurantHeaderComponent } from '../../containers/restaurant-header/restaurant-header.component';
+import { TopPickCardComponent } from '../../containers/top-pick-card/top-pick-card.component';
+import { BottomToastComponent } from '../../containers/bottom-toast/bottom-toast.component';
 
 @Component({
   selector: 'app-restaurant-page',

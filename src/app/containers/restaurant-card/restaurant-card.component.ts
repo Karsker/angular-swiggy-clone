@@ -1,6 +1,6 @@
 import { NgFor } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { Restaurant } from '../../types';
+import { Restaurant } from '../../../types';
 import { RouterLink } from '@angular/router';
 
 @Component({

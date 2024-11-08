@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { CartHandlerService } from '../cart-handler.service';
-import { RestaurantHandlerService } from '../restaurant-handler.service';
-import { CartItem, RestaurantDetails } from '../../types';
+import { CartHandlerService } from '../../services/cart-handler/cart-handler.service';
+import { RestaurantHandlerService } from '../../services/restaurant-handler/restaurant-handler.service';
+import { CartItem, RestaurantDetails } from '../../../types';
 import { RouterLink } from '@angular/router';
-import { NavbarComponent } from '../navbar/navbar.component';
+import { NavbarComponent } from '../../containers/navbar/navbar.component';
 import { NgFor, NgIf } from '@angular/common';
-import { UserAuthenticationService } from '../user-authentication.service';
-import { SignInPanelComponent } from '../sign-in-panel/sign-in-panel.component';
+import { UserAuthenticationService } from '../../services/user-authentication/user-authentication.service';
+import { SignInPanelComponent } from '../../containers/sign-in-panel/sign-in-panel.component';
 @Component({
   selector: 'app-cart-page',
   standalone: true,

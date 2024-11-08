@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { UserAuthenticationService } from '../user-authentication.service';
+import { UserAuthenticationService } from '../../services/user-authentication/user-authentication.service';
 import { NgClass, NgIf } from '@angular/common';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { User } from '../../types';
+import { User } from '../../../types';
 
 @Component({
   selector: 'app-sign-in-panel',

@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { FindRestaurantCardComponent } from '../find-restaurant-card/find-restaurant-card.component';
+import { FindRestaurantCardComponent } from '../../containers/find-restaurant-card/find-restaurant-card.component';
 import { NgFor } from '@angular/common';
 @Component({
   selector: 'app-find-restaurants',
